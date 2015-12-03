@@ -6,4 +6,4 @@ var app = http.createServer(function(req,res){
 	res.end();
 });
 app.listen(4000);
-console.log('Server gestart op http://localhost:3000 ...');
+console.log('Server gestart op http://localhost:4000 ...');
