@@ -1,7 +1,7 @@
 var http = require('http');
 
 var app = http.createServer(function(req,res){
-    res.setHeader('Content-Type', 'application/json');
+    res.writeHead(200, {"Content-Type": "application/json", 'Access-Control-Allow-Origin': '*'});
     res.write(JSON.stringify({"name":"Koen & Jarno","members":[{"name":"Koen Vaes"},{"name":"Jarno Michiels"}]}));
 	res.end();
 });
