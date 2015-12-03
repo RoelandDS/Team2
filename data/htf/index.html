@@ -9,14 +9,23 @@
 <body>
 <div class="container text-center" ng-controller="htfController as ctrl">
 	<br/>
-    <button class="btn btn-lg btn-block btnRood" ng-click="ctrl.btnClicked('rood')" >Rood</button>
-	<br/>
-    <button class="btn btn-lg btn-block btnGeel" ng-click="ctrl.btnClicked('geel')">Geel</button>
-	<br/>
-    <button class="btn btn-lg btn-block btnBlauw" ng-click="ctrl.btnClicked('blauw')">Blauw</button>
-	<br/>
-    <button class="btn btn-lg btn-block btnGroen" ng-click="ctrl.btnClicked('groen')">Groen</button>
-	<br/>
+	<div class="btn-group btn-block">
+		<button class="btn btn-lg btnWidth btn-success" ng-click="ctrl.btnClicked('on')" >ON</button>
+		<button class="btn btn-lg btnWidth btn-danger" ng-click="ctrl.btnClicked('off')" >OFF</button>
+	</div>
+	<hr/>
+	<div class="btnWidth btnMargin">
+		<button class="btn btn-lg btn-block btnRood" ng-click="ctrl.btnClicked('rood')" >Rood</button>
+		<br/>
+		<button class="btn btn-lg btn-block btnGeel" ng-click="ctrl.btnClicked('geel')">Geel</button>
+		<br/>
+		<button class="btn btn-lg btn-block btnBlauw" ng-click="ctrl.btnClicked('blauw')">Blauw</button>
+		<br/>
+		<button class="btn btn-lg btn-block btnGroen" ng-click="ctrl.btnClicked('groen')">Groen</button>
+		<br/>
+		<button class="btn btn-lg btn-block btnRandom" ng-click="ctrl.btnClicked('random')">Random</button>
+	</div>
+	<hr/>
 	<button class="btn btn-lg btn-block" ng-click="ctrl.registerTeam()">Registreer team</button>
 
 	<h1>{{ctrl.gelukt}}</h1>

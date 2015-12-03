@@ -18,6 +18,12 @@
             var kleur;
 
             switch(button){
+                case 'on':
+                    kleur = '{"on":true, "bri":254, "xy":[0.3059,0.3303]}';
+                    break;
+                case 'off':
+                    kleur = '{"on":false}';
+                    break;
                 case 'rood':
                     kleur = '{"on":true, "bri":254, "xy":[0.6621,0.3023]}';
                     break;
@@ -30,13 +36,18 @@
                 case 'groen':
                     kleur = '{"on":true, "bri":254, "xy":[0.214,0.709]}';
                     break;
+                case 'random':
+                    var rndX = Math.random();
+                    var rndy = Math.random();
+                    kleur = '{"on":true, "bri":254, "xy":[' + rndX + ',' + rndy + ']}';
+                    break;
                 default :
                     kleur = '{"on":true, "bri":254, "xy":[0.6621,0.3023]}';
             }
 
             colorFactory.setLight(kleur)
                 .success(function () {
-                    vm.gelukt = 'Kleur = ' + button;
+                    vm.gelukt = 'Status = ' + button;
                 })
                 .error(function (err, status) {
                     vm.errorMsg = err;
